@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Page</title>
+</head>
+<body>
+<h1>Update Page</h1>
+<form action="/updatewithid" method="post" th:object="${user}">
+    UserName : <input type="text" name="username" th:value="*{username}"><br>
+    Password : <input type="text" name="password" th:value="*{password}"><br>
+    <input type="hidden" name="id" th:value="*{id}">
+    <button type="submit">Update</button>
+    <br>
+    <button type="reset">Clear</button>
+</form>
+<hr>
+<form action="/home" method="get">
+    <button type="submit">Back</button>
+</form>
+</body>
+</html>

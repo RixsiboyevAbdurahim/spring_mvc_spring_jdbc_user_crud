@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete User Page</title>
+</head>
+<body>
+<h1>Delete User Page</h1>
+<h2 style="color: red">Are you deleted User ?</h2>
+<hr>
+<form action="/deletewithid" method="post">
+    <input type="hidden" name="id" th:value="${id}">
+    <button type="submit">Yes</button>
+</form>
+<form action="/home" method="get">
+    <button type="submit">No</button>
+</form>
+</body>
+</html>
